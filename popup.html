@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="header-content">
+        <div class="logo-wrapper">
+          <i class="material-icons logo-icon">format_shapes</i>
+          <h1>SVG Finder</h1>
+        </div>
+        <div class="header-badges">
+          <span class="badge total-count" id="totalCount">
+            <i class="material-icons count-icon">collections</i>
+            0 SVGs found
+          </span>
+        </div>
+      </div>
+    </header>
+    
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search SVGs...">
+      <i class="material-icons search-icon">search</i>
+    </div>
+
+    <div class="gallery-container">
+      <div id="svgGallery" class="svg-gallery"></div>
+    </div>
+
+    <div id="previewModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>SVG Preview</h2>
+          <span class="close-modal">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="preview-controls">
+            <button class="zoom-btn" id="zoomOut">
+              <i class="material-icons">remove</i>
+              Zoom Out
+            </button>
+            <span class="preview-size" id="previewSize">100%</span>
+            <button class="zoom-btn" id="zoomIn">
+              <i class="material-icons">add</i>
+              Zoom In
+            </button>
+            <button class="zoom-btn" id="resetZoom">
+              <i class="material-icons">refresh</i>
+              Reset
+            </button>
+          </div>
+          <div id="previewContent"></div>
+          <div class="modal-actions">
+            <div class="svg-info" id="svgInfo"></div>
+            <button class="download-btn" id="modalDownloadBtn">
+              <i class="material-icons">download</i>
+              Download SVG
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="app-footer">
+      <div class="developer-credit">
+        <a href="https://github.com/saifulislammz" target="_blank">
+          <i class="material-icons">code</i>
+          <span>Developed by saifulislammz</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="notification-popup" id="notificationPopup">
+    <div class="notification-content">
+      <h3>🎉 Special Offer!</h3>
+      <p>Get 20% off on our Premium Tools!</p>
+      <div class="notification-actions">
+        <button class="notify-btn primary" onclick="window.open('https://your-promotional-link.com', '_blank')">Learn More</button>
+        <button class="notify-btn secondary" id="closeNotification">Maybe Later</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 
